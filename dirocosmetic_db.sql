@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2023 at 04:01 PM
+-- Generation Time: Jul 29, 2023 at 05:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -162,7 +162,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `passwords`, `user_type`, `date`) VALUES
 (2, 'monyrasath44@gmail.com', 'Nara', 'Sath', '123', 'user', '2022-08-10'),
-(26, 'reancode123@gamil.com', 'Gogo', 'Heng', '456', 'user', '2022-12-20');
+(26, 'reancode123@gamil.com', 'Gogo', 'Heng', '456', 'user', '2022-12-20'),
+(34, 'testing23@gmail.com', 'Admin', 'Testing', '123', 'user', '2023-07-29');
 
 --
 -- Indexes for dumped tables
@@ -230,7 +231,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
