@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 174, 174);
+}
+
+/* Admin Header */
+.header {
+    top: 0;
+    left: 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    position: relative;
+    margin: 0 auto;
+    padding: 7px 100px;
+    position: sticky;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.navbar #logo {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #1d1d1d;
+    font-weight: 500;
+}
+
+.navbar #logo span {
+    color: rgb(238, 96, 119);
+    margin-left: -8px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-right: 30px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: .5rem;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(221, 114, 132);
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    transition: 0.3 all ease;
+}
+
+.navbar .icons {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+.icons {
+    color: rgb(137, 136, 136);
+    margin: 0px 10px;
+}
+
+.icons #menu_btn {
+    display: none;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+/* User Accunt */
+.show_userAcc {
+    width: auto;
+    height: auto;
+    font-family: inherit;
+    text-align: center;
+    border: 2px solid rgb(99, 99, 99);
+    background-color: rgb(252, 252, 252);
+    padding: 20px 30px 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 110px;
+    right: 100px;
+    display: none;
+}
+
+.header .show_userAcc.active {
+    display: block;
+}
+
+.show_userAcc .userImg {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 13px;
+ }
+
+.show_userAcc .userImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 1;
+    border: 2px solid rgb(31, 31, 31);
+}
+
+.show_userAcc p {
+    font-size: 16px;
+    color: #161616;
+    line-height: 20px;
+    cursor: pointer;
+    margin: 5px 0px;
+}
+
+.show_userAcc .logoutBtn {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.show_userAcc .logoutBtn a {
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    color: snow;
+    background-color: #282727;
+    padding: 7px 23px;
+    border-radius: 5px;
+}
+
+.show_userAcc .logoutBtn a:hover {
+    background-color: #494949;
+}
+
+/* Dashboard */
+.dashboard {
+    width: 100%;
+    height: auto;
+    margin: 70px auto 30px;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 2rem;
+    text-align: center;
+    color: #1d1d1d;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 300px;
+    margin: 5px 0px;
+}
+
+.box-container .box {
+    border: 2px solid #555555;
+    background-color: #fff;
+    box-shadow: 3px 5px rgb(209, 208, 208);
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin: 20px 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.box h3 {
+    color: #1d1d1d;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+
+.box p {
+    color: rgb(22, 22, 22);
+    font-size: 18px;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 250px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Products */
+.products {
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.addProducts {
+    margin: 30px 346px 0px;
+    border: 2px solid #605e5e;
+    width: 55%;
+    height: auto;
+    border-radius: 10px;
+  /*  position: relative; */
+}
+
+.products h1, .addProducts h2 {
+    font-family: inherit;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+}
+
+.addProducts h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.addProducts form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 75px;
+    position: relative;
+}
+
+form .pro_col {
+    text-align: center;
+}
+
+.addProducts form input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 2px solid rgb(165, 164, 164);
+    border-radius: 5px;
+    width: 335px;
+    margin-bottom: 20px;
+}
+
+.addProducts form label {
+    display: block;
+    margin-left: -210px;
+    margin-top: -10px;
+    color: rgb(69, 68, 68);
+    margin-bottom: 15px;
+}
+
+.addProducts form #proDetail_img_lable {
+    margin-left: -200px;
+}
+
+.addProducts form .addProduct_btn {
+    color: snow;
+    border: 2px solid rgb(64, 64, 64);
+    background-color: rgb(218, 88, 110);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 6px 0px;
+    text-align: center;
+    width: 175px;
+    top: 220px;
+    left: 23px;
+    position: absolute;
+}
+
+.addProducts form .addProduct_btn:hover {
+    background-color: rgb(217, 102, 121);
+    color: #111111;
+    transition: 0.3 all ease;
+}
+
+.showPro {
+    margin: 120px 100px 100px;
+}
+
+.showPro .Pro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.showPro .pro_item {
+    width: 29%;
+    height: auto;
+    border: 2px solid #696868;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    padding: 35px 20px 0px;
+}
+
+.pro_item img {
+    width: 90%;
+    height: 90%;
+    opacity: 1;
+}
+
+.pro_item .proName {
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 3px;
+}
+
+.pro_item .proPrice {
+    font-family: inherit;
+    color: #111111;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.update_btn, .delete_btn {
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: rgb(163, 59, 93);
+    color: snow;
+    padding: 7px 35px;
+    border-radius: 3px;
+    margin: 5px 1px 25px;
+    cursor: pointer;
+}
+
+.delete_btn {
+    background-color: #616161;
+}
+
+.update_btn:hover {
+    background-color: rgb(163, 72, 102);
+    color: black;
+    font-weight: 500;
+}
+
+.delete_btn:hover {
+    background-color: #5a5a5a;
+    color: black;
+    font-weight: 500;
+}
+
+.pro_item .exitBtn i {
+    font-size: 22px;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    transition: 0.3 all ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pro_item .exitBtn i:hover {
+    color: rgb(163, 59, 93);
+    transition: all .3 ease;
+}
+
+/* Orders */
+.orders {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.orders h1, .userAcc h1, .show_message h1 {
+    margin-bottom: 20px;
+}
+
+.showOrder .orderRow, .userAcc .userRow, .show_message .mesRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.showOrder .result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 30px 20px 15px;
+}
+
+.showResult {
+    width: 380px;
+    border: 2px solid #8d8b8b;
+    border-radius: 5px;
+    padding: 15px 10px 20px;
+    margin-left: 30px;
+}
+
+.showResult p {
+    color: #333333;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: .5rem;
+    margin-bottom: -10px;
+    line-height: 30px;
+   
+} 
+
+.showResult p span {
+    color: rgb(22, 22, 22); 
+    font-weight: 400;
+    cursor: pointer;
+}
+  
+.orders form {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.orders form select {
+    border: 2px solid #b3b3b3;
+    border-radius: 10px;
+    padding: 5px 0px;
+    font-family: inherit;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: #fff;
+}
+
+.orders form a {
+    text-decoration: none;
+    margin: 5px 5px 15px;
+    color: snow;
+    padding: 7px 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.orders form .delete_btn {
+    background-color: #545454;
+}
+
+.orders form .update_btn {
+    background-color: rgb(182, 76, 94);
+    margin-left: -4px;
+}
+
+.orders form .update_btn:hover {
+    background-color: rgb(186, 94, 110);
+    color: black;
+}
+
+.orders form .delete_btn:hover {
+    background-color: #676666;
+    color: black;
+}
+
+ /* Users */
+ .userAcc {
+    text-align: center;
+    margin: 70px 0px 150px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.show_acc .user_acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.show_acc .account {
+    width: 390px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.account .button {
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.account .delete_btn {
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #636262;
+    margin: 5px 5px 20px;
+    color: snow;
+    padding: 7px 40px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.account .delete_btn:hover {
+    background-color: #767575;
+    color: black;
+}
+
+ /* Messages */
+ .message {
+    margin: 70px 0px 50px; 
+}
+
+.show_message {
+    margin: 30px 0px 50px; 
+    width: 100%;    
+    height: auto;
+}
+
+.show_message .showMess {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 30px; 
+}
+
+.show_message .showMess div {
+    width: 450px;
+    margin: 0 10px;
+}
+
+.mess button {
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #636262;
+    margin: 5px 5px 20px;
+    color: snow;
+    padding: 7px 40px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+
+.mess button:hover {
+    background-color: #767575;
+    color: black;
+}
